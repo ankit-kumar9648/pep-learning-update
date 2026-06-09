@@ -1,0 +1,171 @@
+# LeetCode Solutions - PEP Class
+
+## 1. Two Sum
+
+```cpp
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        unordered_map<int,int> mp;
+        for(int i=0;i<nums.size();i++){
+            int complement = target - nums[i];
+            if(mp.find(complement)!=mp.end())
+                return {mp[complement],i};
+            mp[nums[i]] = i;
+        }
+        return {};
+    }
+};
+```
+
+## 2. Reverse Integer
+
+```cpp
+class Solution {
+public:
+    int reverse(int x) {
+        long long rev=0;
+        while(x!=0){
+            rev=rev*10+x%10;
+            x/=10;
+        }
+        if(rev>INT_MAX || rev<INT_MIN) return 0;
+        return rev;
+    }
+};
+```
+
+## 3. Palindrome Number
+
+```cpp
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if(x<0) return false;
+        int temp=x;
+        long long rev=0;
+        while(x){
+            rev=rev*10+x%10;
+            x/=10;
+        }
+        return temp==rev;
+    }
+};
+```
+
+## 4. Sqrt(x)
+
+```cpp
+class Solution {
+public:
+    int mySqrt(int x) {
+        return sqrt(x);
+    }
+};
+```
+
+## 5. Remove Element
+
+```cpp
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        int k=0;
+        for(int i=0;i<nums.size();i++){
+            if(nums[i]!=val){
+                nums[k]=nums[i];
+                k++;
+            }
+        }
+        return k;
+    }
+};
+```
+
+## 6. Remove Duplicates from Sorted Array
+
+```cpp
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        if(nums.size()==0) return 0;
+        int k=1;
+        for(int i=1;i<nums.size();i++){
+            if(nums[i]!=nums[i-1]){
+                nums[k]=nums[i];
+                k++;
+            }
+        }
+        return k;
+    }
+};
+```
+
+## 7. Best Time to Buy and Sell Stock
+
+```cpp
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int minPrice=INT_MAX;
+        int profit=0;
+        for(int price:prices){
+            minPrice=min(minPrice,price);
+            profit=max(profit,price-minPrice);
+        }
+        return profit;
+    }
+};
+```
+
+## 8. Contains Duplicate
+
+```cpp
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int> st;
+        for(int num:nums){
+            if(st.count(num))
+                return true;
+            st.insert(num);
+        }
+        return false;
+    }
+};
+```
+
+## 9. Maximum Subarray
+
+```cpp
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int curr=nums[0];
+        int maxi=nums[0];
+        for(int i=1;i<nums.size();i++){
+            curr=max(nums[i],curr+nums[i]);
+            maxi=max(maxi,curr);
+        }
+        return maxi;
+    }
+};
+```
+
+## 10. Subtract the Product and Sum of Digits of an Integer
+
+```cpp
+class Solution {
+public:
+    int subtractProductAndSum(int n) {
+        int product=1,sum=0;
+        while(n){
+            int digit=n%10;
+            product*=digit;
+            sum+=digit;
+            n/=10;
+        }
+        return product-sum;
+    }
+};
+```
