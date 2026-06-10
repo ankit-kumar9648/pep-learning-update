@@ -9,10 +9,8 @@ This repository is dedicated to tracking my daily learning progress, coding prac
 In this repository, I document:
 
 * Daily learning updates
-* C/C++ concepts and notes
+* C++ concepts and programs
 * LeetCode problem solutions
-* Data Structures & Algorithms practice
-* Programming exercises and assignments
 
 ## 📂 Repository Structure
 
