@@ -169,3 +169,125 @@ public:
     }
 };
 ```
+# LeetCode 191: Number of 1 Bits (Hamming Weight)
+
+## Problem Statement
+
+Given a positive integer `n`, write a function that returns the number of set bits (`1`s) in its binary representation.
+
+### Example
+
+```text
+Input: n = 11
+
+Binary Representation: 1011
+
+Output: 3
+```
+
+---
+
+## C++ Solution
+
+```cpp
+class Solution {
+public:
+    int hammingWeight(uint32_t n) {
+        int count = 0;
+
+        while (n != 0) {
+            n &= (n - 1);
+            ++count;
+        }
+
+        return count;
+    }
+};
+```
+
+---
+
+## Approach: Brian Kernighan's Algorithm
+
+The expression:
+
+```cpp
+n & (n - 1)
+```
+
+removes the **rightmost set bit (1)** from the binary representation of `n`.
+
+### Example
+
+```text
+n = 12
+
+Binary: 1100
+
+n - 1 = 1011
+
+1100
+1011
+----
+1000
+```
+
+The last set bit is removed.
+
+---
+
+## Dry Run
+
+For `n = 11`:
+
+```text
+11 = 1011
+```
+
+### Iteration 1
+
+```text
+1011 & 1010 = 1010
+Count = 1
+```
+
+### Iteration 2
+
+```text
+1010 & 1001 = 1000
+Count = 2
+```
+
+### Iteration 3
+
+```text
+1000 & 0111 = 0000
+Count = 3
+```
+
+Loop terminates because `n = 0`.
+
+### Final Answer
+
+```text
+3
+```
+
+---
+
+## Time Complexity
+
+* **O(k)**, where `k` is the number of set bits.
+
+## Space Complexity
+
+* **O(1)**
+
+---
+
+## Key Learning
+
+> `n & (n - 1)` removes the rightmost set bit from a number.
+
+This technique is widely used in bit manipulation problems and is known as **Brian Kernighan's Algorithm**.
+
