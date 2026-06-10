@@ -21,9 +21,6 @@ pep-learning-update/
 │
 ├── daily-updates/
 │   └── Daily learning logs
-│
-└── leetcode-solutions/
-    └── C++ solutions for LeetCode problems
 ```
 
 ## 🎯 Learning Goals
