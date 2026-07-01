@@ -328,3 +328,319 @@ int main()
     return 0;
 }
 ```
+# Linked List Menu-Driven Program (C++)
+
+This program demonstrates basic operations on a **Singly Linked List** using a menu-driven interface.
+
+---
+
+## Output
+
+### Main Menu
+
+```text
+========== LINKED LIST MENU ==========
+
+1. Create Linked List
+2. Add Node at Start
+3. Add Node at Last
+4. Search an Item
+5. Delete Node from First
+6. Delete Node from Last
+7. Find Maximum Value
+8. Find Minimum Value
+9. Display All Values
+0. Exit
+
+Enter your choice:
+```
+
+---
+
+## 1. Create Linked List
+
+### Input
+
+```text
+Enter your choice: 1
+
+Enter number of nodes: 5
+
+Enter value for node 1: 10
+Enter value for node 2: 20
+Enter value for node 3: 30
+Enter value for node 4: 40
+Enter value for node 5: 50
+```
+
+### Output
+
+```text
+Linked List Created Successfully.
+```
+
+---
+
+## 2. Add Node at Start
+
+### Input
+
+```text
+Enter your choice: 2
+
+Enter value to insert at beginning: 5
+```
+
+### Output
+
+```text
+Node inserted at beginning.
+```
+
+Current List
+
+```text
+5 → 10 → 20 → 30 → 40 → 50
+```
+
+---
+
+## 3. Add Node at Last
+
+### Input
+
+```text
+Enter your choice: 3
+
+Enter value to insert at end: 60
+```
+
+### Output
+
+```text
+Node inserted at end.
+```
+
+Current List
+
+```text
+5 → 10 → 20 → 30 → 40 → 50 → 60
+```
+
+---
+
+## 4. Search an Item
+
+### Input
+
+```text
+Enter your choice: 4
+
+Enter item to search: 30
+```
+
+### Output
+
+```text
+Item found at position 4
+```
+
+---
+
+### Input
+
+```text
+Enter item to search: 100
+```
+
+### Output
+
+```text
+Item not found in the list.
+```
+
+---
+
+## 5. Delete First Node
+
+### Input
+
+```text
+Enter your choice: 5
+```
+
+### Output
+
+```text
+First node deleted successfully.
+```
+
+Current List
+
+```text
+10 → 20 → 30 → 40 → 50 → 60
+```
+
+---
+
+## 6. Delete Last Node
+
+### Input
+
+```text
+Enter your choice: 6
+```
+
+### Output
+
+```text
+Last node deleted successfully.
+```
+
+Current List
+
+```text
+10 → 20 → 30 → 40 → 50
+```
+
+---
+
+## 7. Find Maximum Value
+
+### Input
+
+```text
+Enter your choice: 7
+```
+
+### Output
+
+```text
+Maximum value in the list = 50
+```
+
+---
+
+## 8. Find Minimum Value
+
+### Input
+
+```text
+Enter your choice: 8
+```
+
+### Output
+
+```text
+Minimum value in the list = 10
+```
+
+---
+
+## 9. Display All Values
+
+### Input
+
+```text
+Enter your choice: 9
+```
+
+### Output
+
+```text
+Linked List Elements are:
+10 20 30 40 50
+```
+
+---
+
+## 0. Exit
+
+### Input
+
+```text
+Enter your choice: 0
+```
+
+### Output
+
+```text
+Program terminated successfully.
+```
+
+---
+
+## Sample Complete Run
+
+```text
+========== LINKED LIST MENU ==========
+
+1. Create Linked List
+2. Add Node at Start
+3. Add Node at Last
+4. Search an Item
+5. Delete Node from First
+6. Delete Node from Last
+7. Find Maximum Value
+8. Find Minimum Value
+9. Display All Values
+0. Exit
+
+Enter your choice: 1
+
+Enter number of nodes: 5
+
+Enter value for node 1: 10
+Enter value for node 2: 20
+Enter value for node 3: 30
+Enter value for node 4: 40
+Enter value for node 5: 50
+
+Linked List Created Successfully.
+
+Enter your choice: 2
+Enter value to insert at beginning: 5
+
+Node inserted at beginning.
+
+Enter your choice: 3
+Enter value to insert at end: 60
+
+Node inserted at end.
+
+Enter your choice: 9
+
+Linked List Elements are:
+5 10 20 30 40 50 60
+
+Enter your choice: 4
+
+Enter item to search: 30
+
+Item found at position 4
+
+Enter your choice: 7
+
+Maximum value in the list = 60
+
+Enter your choice: 8
+
+Minimum value in the list = 5
+
+Enter your choice: 5
+
+First node deleted successfully.
+
+Enter your choice: 6
+
+Last node deleted successfully.
+
+Enter your choice: 9
+
+Linked List Elements are:
+10 20 30 40 50
+
+Enter your choice: 0
+
+Program terminated successfully.
+```
