@@ -192,6 +192,6 @@ Through this project, I learned:
 
 # 👨‍💻 Developed By
 
-**Ankit Yadav**
+**Ankit Kumar**
 
 MCA Student | Software Developer
